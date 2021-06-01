@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto%20Condensed");
+.row-header {
+  margin: 0px auto;
+  padding: 0px auto;
+}
+
+.row-content {
+  margin: 0px auto;
+  padding: 50px 0px 50px 0px;
+  border-bottom: 1px ridge;
+  min-height: 400px;
+}
+
+address {
+  font-size: 80%;
+  margin: 0px;
+  color: #0f0f0f;
+}
+
+.navbar-dark {
+  background-color: black;
+  color: white;
+  font-family: Azonix;
+}
+
+.page-enter {
+  opacity: 0.01;
+  transform: translateX(-100%);
+}
+
+.page-enter-active {
+  opacity: 1;
+  transform: translateX(0%);
+  transition: all 0.3s ease-in;
+}
+
+.page-exit {
+  opacity: 1;
+  transform: translateX(0%);
+}
+
+.page-exit-active {
+  opacity: 0%;
+  transform: translateX(100%);
+  transition: all 0.3s ease-out;
+}
+
+.breadcrumb {
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: #fff;
+  width: 150px;
+  padding: 10px;
+  justify-content: center;
+}
+
+.breadcrumb-item {
+  margin: 10px;
+  font-family: "Roboto Condensed";
+  color: black;
+}
+
+.breadcrumb-item a {
+  text-decoration: none;
+  color: rgb(29, 30, 41);
+}
+
+@font-face {
+  font-family: "Azonix";
+  src: local("Azonix") url("./fonts/Azonix.woff") format("woff");
+}
+
+@font-face {
+  font-family: "Adam";
+  src: local("Adam-Bold") url("./fonts/Adam-Bold.ttf") format("truetype");
+}
+
+.work_header h3 {
+  color: wheat;
+  font-size: 100px;
+  font-family: "Roboto Condensed";
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: sans-serif;
+}
+
+.carousel {
+  margin-top: 50px;
+  margin-bottom: 50px;
+  background: #000;
+  border-radius: 10px;
+  width: 450px;
+  height: 420px;
+  box-shadow: 5px 5px 10px black;
+}
+.carousel img {
+  display: block;
+  border-radius: 10px;
+  height: 400px;
+}
+
+@media screen and (max-width: 768px) {
+  .flicity-viewport {
+    width: 300px;
+  }
+  .carousel {
+    width: 320px;
+    height: auto;
+  }
+  .carousel img {
+    height: 400px;
+  }
+}
+
+@media screen and(min-width: 1024px) {
+  .carousel {
+    width: 320px;
+    height: auto;
+  }
+}
+
+.flickity-prev-next-button {
+  width: 60px;
+  height: 60px;
+  background: transparent;
+  opacity: 0.6;
+}
+.flickity-prev-next-button:hover {
+  background: transparent;
+  opacity: 1;
+}
+/* arrow color */
+.flickity-prev-next-button .arrow {
+  fill: black;
+}
+.flickity-prev-next-button.no-svg {
+  color: white;
+}
+/* closer to edge */
+.flickity-prev-next-button.previous {
+  left: 0;
+}
+.flickity-prev-next-button.next {
+  right: 0;
+}
+/* hide disabled button */
+.flickity-prev-next-button:disabled {
+  display: none;
+}
+
+h1 {
+  color: grey;
+}

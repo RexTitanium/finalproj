@@ -1,0 +1,98 @@
+.footer {
+  background-color: #000000;
+  margin: 0px auto;
+  padding: 20px 0px 20px 0px;
+}
+
+.links li a {
+  font-family: "Adam";
+  color: beige;
+  text-decoration: none;
+}
+
+.links2 li {
+  font-family: "Adam";
+  color: rgb(255, 255, 255);
+  text-decoration: none;
+}
+
+.links li a:hover {
+  color: grey;
+}
+
+.footer h5 {
+  color: white;
+  font-family: Azonix;
+}
+
+.logos a i {
+  color: rgb(255, 244, 223);
+}
+
+.ml {
+  margin-left: 200px;
+}
+
+.social h4 {
+  font-family: Azonix;
+  margin-left: 0px;
+  color: wheat;
+}
+
+body {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.social h4 {
+  color: #ffffff;
+  background: linear-gradient(
+    to right,
+    wheat 0,
+    rgb(214, 214, 255) 25%,
+    aquamarine 50%,
+    rgb(127, 225, 255) 75%,
+    #ffa5a5 100%
+  );
+  background-position: 0;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s infinite linear;
+  animation-fill-mode: forwards;
+  -webkit-text-size-adjust: none;
+  font-weight: 600;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+@keyframes shine {
+  0% {
+    background-position: 0;
+  }
+  25% {
+    background-position: 50px;
+  }
+  50% {
+    background-position: 100px;
+  }
+  75% {
+    background-position: 150px;
+  }
+  100% {
+    background-position: 200px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .social h4,
+  .social a,
+  .codes h5,
+  .codes li,
+  .link-nav h5,
+  .link-nav li {
+    font-size: 70%;
+  }
+  .link-nav {
+    margin-left: 20px;
+  }
+}

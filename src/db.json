@@ -1,0 +1,42 @@
+{
+  "cards":[
+    {
+      "id":0,
+      "image": "/assets/images/Tranquille2.png",
+      "title": "TRANQUILLE",
+      "text": "Photoshop, Blender",
+      "label":"Featured",
+      "featured": true
+    },
+    {
+      "id":1,
+      "image": "/assets/images/OTW2.png",
+      "title": "FALLS HIKE",
+      "text": "Photoshop",
+      "label":"Featured",
+      "featured": true
+    },
+    {
+      "id":2,
+      "image": "/assets/images/Canvas.png",
+      "title": "FINDING NEBULA",
+      "text": "Photoshop",
+      "label":"Featured",
+      "featured": true
+    },
+    {
+      "id":3,
+      "image": "/assets/images/MoonWitch.png",
+      "title": "MOON WITCH",
+      "text": "Photoshop",
+      "featured": false
+    },
+    {
+      "id":4,
+      "image":"/assets/images/FindingLife.png",
+      "title": "FINDING LIFE",
+      "text": "Photoshop",
+      "featured": false
+    }
+  ]
+}

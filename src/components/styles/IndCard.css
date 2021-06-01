@@ -1,0 +1,80 @@
+.card-container {
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  margin: 50px;
+  padding: 0;
+  display: flex;
+}
+.card-wrapper {
+  border-radius: 10px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+  width: 540px;
+  box-shadow: 0 5px 10px black;
+}
+.card-image {
+  max-width: 100%;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
+.card-info {
+  font-family: Arial;
+  color: rgb(151, 151, 151);
+  margin-left: 50px;
+}
+
+.title {
+  font-family: "Roboto Condensed";
+  font-size: 35px;
+  border-bottom: 2px solid rgb(109, 136, 130);
+  text-shadow: 0 1px 10px solid black;
+}
+
+@media screen and (max-width: 768px) {
+  .card-container {
+    margin: 0px;
+    margin-top: 10px;
+  }
+  .card-wrapper {
+    width: 240px;
+  }
+}
+
+.description {
+  font-family: "Roboto Condensed";
+  font-size: 35px;
+  border-bottom: 2px solid rgb(109, 136, 130);
+  text-shadow: 0 1px 10px solid black;
+}
+
+h2 {
+  font-family: "Consolas";
+  color: beige;
+  animation: color-change 6s infinite linear;
+}
+
+@keyframes color-change {
+  0% {
+    color: rgb(108, 143, 132);
+  }
+  25% {
+    color: rgb(61, 73, 73);
+  }
+  50% {
+    color: rgb(129, 113, 93);
+  }
+  100% {
+    color: rgb(73, 90, 97);
+  }
+}
+
+.error {
+  color: grey;
+  margin: 50px;
+}

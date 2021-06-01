@@ -1,0 +1,220 @@
+@import url("https://fonts.googleapis.com/css?family=Roboto%20Condensed");
+@import url("https://fonts.googleapis.com/css?family=Monoton");
+@import url("https://fonts.googleapis.com/css?family=Odibee%20Sans");
+@import url("https://fonts.googleapis.com/css?family=Bebas%20Neue");
+
+.slow-spin:hover {
+  -webkit-animation: fa-spin 5s infinite linear;
+  animation: fa-spin 2.5s infinite reverse;
+}
+
+.nav-links {
+  font-size: 20px;
+  font-family: "Odibee Sans";
+  text-decoration: none;
+  color: white;
+  border: none;
+  transition: 0.5s ease;
+  text-shadow: 0px 3px 5px #010101;
+}
+.nav-links:hover {
+  color: blanchedalmond;
+  transition: 0.1s ease;
+  border-bottom: 3px solid blanchedalmond;
+}
+
+.navbar {
+  background: rgb(14, 13, 15);
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.2rem;
+  position: sticky;
+  top: 0;
+  z-index: 999;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80px;
+  max-width: 1500px;
+}
+
+.navbar-logo {
+  color: #fff;
+  justify-self: start;
+  margin-left: 40px;
+  cursor: pointer;
+  text-decoration: none;
+  font-family: Monoton;
+  font-size: 2rem;
+  display: flex;
+  align-items: center;
+}
+
+.navbar-logo:hover {
+  color: white;
+}
+
+.fa-typo3 {
+  margin-left: 0.5rem;
+  font-size: 1.8rem;
+}
+
+.nav-menu {
+  display: grid;
+  grid-template-columns: repeat(4, auto);
+  grid-gap: 10px;
+  list-style: none;
+  text-align: center;
+  width: 60vw;
+  justify-content: end;
+  margin-right: 2rem;
+}
+
+.nav-item {
+  height: 80px;
+}
+
+.nav-links {
+  color: #fff;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  height: 100%;
+}
+
+.nav-links:hover {
+  color: #fff;
+  border-bottom: 4px solid #fff;
+  transition: all 0.2s ease-out;
+}
+
+.fa-bars {
+  color: #fff;
+}
+
+.nav-links-mobile {
+  display: none;
+}
+
+.menu-icon {
+  display: none;
+}
+
+@keyframes color1 {
+  0% {
+    color: #ffffff;
+  }
+  25% {
+    color: rgb(227, 255, 255);
+  }
+  50% {
+    color: rgb(181, 255, 255);
+  }
+  100% {
+    color: rgb(144, 255, 255);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .navbar {
+    background: #000000;
+  }
+
+  .NavbarItems {
+    position: relative;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 90vh;
+    position: absolute;
+    top: 80px;
+    left: -100%;
+    opacity: 1;
+    transition: all 1s ease;
+  }
+
+  .nav-menu.active {
+    background: #000000;
+    left: 0;
+    opacity: 1;
+    transition: all 1s ease;
+    z-index: 1;
+  }
+
+  .nav-links {
+    text-align: center;
+    padding: 2rem;
+    width: 100%;
+    display: table;
+  }
+
+  .nav-links:hover {
+    background-color: rgb(27, 27, 27);
+    color: rgb(144, 255, 255);
+    border-radius: 10px;
+    border-bottom: 0px;
+    transition: all 500ms ease;
+    animation: color1 0.5s linear;
+  }
+
+  .navbar-logo {
+    position: absolute;
+    top: 0;
+    left: 0;
+    transform: translate(25%, 50%);
+  }
+
+  .menu-icon {
+    display: block;
+    position: absolute;
+    top: 0;
+    right: 0;
+    transform: translate(-100%, 60%);
+    font-size: 1.8rem;
+    cursor: pointer;
+  }
+
+  .fa-times {
+    color: #fff;
+    font-size: 2rem;
+  }
+
+  .nav-links-mobile {
+    display: block;
+    text-align: center;
+    margin: 2rem auto;
+    border-radius: 4px;
+    width: 80%;
+    text-decoration: none;
+    font-size: 1.5rem;
+    background-color: transparent;
+    color: #fff;
+    padding: 14px 20px;
+    border: 1px solid #fff;
+    transition: all 0.3s ease-out;
+  }
+
+  .nav-links-mobile:hover {
+    background: #fff;
+    color: #242424;
+    transition: 5000ms;
+  }
+}
+
+
+@font-face {
+  font-family: 'Raleway';
+  font-style: normal;
+  font-weight: 400;
+  src: url(https://fonts.gstatic.com/s/raleway/v19/1Ptxg8zYS_SKggPN4iEgvnHyvveLxVvaorCFPrEHJA.woff2) format('woff2');
+  unicode-range: U+0460-052F, U+1C80-1C88, U+20B4, U+2DE0-2DFF, U+A640-A69F, U+FE2E-FE2F;
+}

@@ -1,0 +1,129 @@
+.cards {
+  padding: 4rem;
+}
+
+.cards__container {
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  max-width: 1120px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+.cards__wrapper {
+  position: relative;
+}
+
+.cards__items {
+  margin-bottom: 24px;
+}
+
+.cards__item {
+  background-color: black;
+  display: flex;
+  flex: 1;
+  margin: 0 1rem;
+  border-radius: 10px;
+}
+
+.cards__item__link {
+  display: flex;
+  flex-flow: column;
+  width: 100%;
+  box-shadow: 0 5px 5px black;
+  border-radius: 10px;
+  overflow: hidden;
+  text-decoration: none;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  display: flex;
+}
+
+.cards__item__pic-wrap {
+  position: relative;
+  width: 100%;
+  padding-top: 67%;
+  margin: auto;
+  overflow: hidden;
+}
+
+.fade-img {
+  animation-name: fade-img;
+  animation-duration: 2s;
+}
+
+.cards__item__img {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: cover;
+  transition: all 0.3s;
+  display: block;
+  width: 100%;
+  height: auto;
+  transform: scale(1);
+}
+
+.cards__item__pic-wrap:hover img,
+.cards__item__pic-wrap:hover video {
+  transform: scale(1.1);
+}
+
+.cards__item__info {
+  padding: 20px 30px 30px;
+}
+
+.cards__item__text {
+  text-align: center;
+  margin: 5px;
+  padding: 5px 5px;
+  font-size: medium;
+  font-family: Consolas;
+  color: white;
+}
+
+.cards__item__heading {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.cards__item__title {
+  margin-top: 5px;
+  font-size: x-large;
+  text-align: center;
+  font-family: Adam;
+  color: white;
+}
+
+@media only screen and (min-width: 1200px) {
+  .content__blog__container {
+    width: 84%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__items {
+    display: flex;
+  }
+
+  .cards__item__pic-wrap::after {
+    bottom: 5%;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .cards__item {
+    margin-bottom: 2rem;
+  }
+
+  .cards__item__pic-wrap::after {
+    bottom: 5%;
+  }
+}
