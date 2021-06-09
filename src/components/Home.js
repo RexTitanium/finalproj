@@ -3,7 +3,9 @@ import { Link } from 'react-router-dom';
 import Flickity from 'react-flickity-component';
 import { Loading } from './Loading';
 import './styles/Home.css';
-
+import classes from './styles/BackgroundVideo.module.css';
+import v1 from '../video/StarNight.mp4';
+import {motion} from 'framer-motion';
 const flickityOptions = {
     initialIndex: 0,
     autoPlay: 3000,
@@ -18,14 +20,17 @@ function RenderCard({cards}) {
             <>
                             
                     <Link to={`/work/${cards.id}/${cards.title}`}>
-                        <figure className='cards__item__pic-wrap2' data-category="FEATURED">
+                        <motion.figure className='cards__item__pic-wrap2' data-category="FEATURED"
+                        initial ={{opacity: 0}}
+                        animate ={{ opacity: 1}}
+                        transition={{delay: 1.5, duration: 1.5}}>
                             
                             <img
                                 className='cards__item__img2'
                                 alt='Work Image'
                                 src={cards.image}
                             />
-                        </figure>
+                        </motion.figure>
                     </Link> 
                 
             </>
@@ -39,7 +44,11 @@ function RenderVideo({cards}) {
         <>
                         
                 <Link to={`/work/${cards.id}/${cards.title}`}>
-                    <div>
+                    <motion.div
+                        initial ={{opacity: 0}}
+                        animate ={{ opacity: 1}}
+                        transition={{delay: 1.5, duration: 1.5}}
+                    >
                         
                         <video
                             className='cards__item__video'
@@ -51,7 +60,7 @@ function RenderVideo({cards}) {
                         >
                             <source src={cards.video} type="video/mp4" />
                         </video>
-                    </div>
+                    </motion.div>
                 </Link> 
             
         </>
@@ -81,6 +90,22 @@ const Home = props =>{
     }
     else{
         return(
+            <div>
+            <div>
+                <div className="heading">
+                    <div className={classes.Container}>
+                        <video width="100%" height="100%" autoPlay="autoplay" loop="loop" muted className={classes.Video}>
+                            <source src={v1} type="video/mp4" />
+                        </video>
+                        <div className={classes.Content}>
+                            <div className={classes.SubContent} >
+                                <h1 className="social">TITANIUM ARTS</h1>
+                                <p>This is my React JS website to portray my work of art</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div className="container">
                 <div className=" list">
                     <ul className="list-unstyled list_featured">
@@ -133,7 +158,7 @@ const Home = props =>{
                     </div>
                 </div>
             </div>
-
+            </div>
         
     );
 

@@ -18,9 +18,8 @@
   max-width: 100%;
   transition: all 0.3s;
   display: block;
-  width: 100%;
-  height: auto;
   transform: scale(1);
+  
 }
 
 .card-info {
@@ -40,9 +39,13 @@
   .card-container {
     margin: 0px;
     margin-top: 10px;
+    flex-direction: column;
   }
   .card-wrapper {
     width: 240px;
+  }
+  .card-info{
+    margin: 50px;
   }
 }
 

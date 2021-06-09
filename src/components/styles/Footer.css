@@ -1,3 +1,6 @@
+@import url("https://fonts.googleapis.com/css?family=Jost");
+@import url("https://fonts.googleapis.com/css?family=Roboto%20Condensed");
+@import url("https://fonts.googleapis.com/css?family=Metrophobic");
 .footer {
   background-color: #000000;
   margin: 0px auto;
@@ -5,13 +8,14 @@
 }
 
 .links li a {
-  font-family: "Adam";
+  font-family: "Roboto Condensed";
+  font-size: 15px;
   color: beige;
   text-decoration: none;
 }
 
 .links2 li {
-  font-family: "Adam";
+  font-family: "Metrophobic";
   color: rgb(255, 255, 255);
   text-decoration: none;
 }
@@ -22,7 +26,7 @@
 
 .footer h5 {
   color: white;
-  font-family: Azonix;
+  font-family: "Jost";
 }
 
 .logos a i {
@@ -34,7 +38,7 @@
 }
 
 .social h4 {
-  font-family: Azonix;
+  font-family: "Jost";
   margin-left: 0px;
   color: wheat;
 }

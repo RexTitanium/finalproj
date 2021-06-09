@@ -8,7 +8,7 @@ function Footer(props) {
         <div className="container">
             <div className="row">  
                 <div className="col-4 col-sm-3 social">
-                    <h4>Titanium Arts</h4>
+                    <h4>TITANIUM ARTS</h4>
                     <div className=" logos">   
                         <a className="btn btn-social-icon btn-instagram" href="https://www.instagram.com/titaniumarts/"><i className="fa fa-instagram fa-lg"></i></a>
                         <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin fa-lg"></i></a>
@@ -18,7 +18,7 @@ function Footer(props) {
                 </div>           
                
                 <div className="col-7 col-sm-5 codes">
-                    <h5>Codes / Packages Used</h5>
+                    <h5>CODES / PACKAGES USED</h5>
                     <ul className="list-unstyled links2">
                         <li>&#60;React JS&#62;</li>
                         <li>&#60;CSS&#62;</li>
@@ -28,7 +28,7 @@ function Footer(props) {
                     </ul>
                 </div>
                 <div className="col col-sm-2 link-nav">
-                    <h5>Links</h5>
+                    <h5>LINKS</h5>
                     <ul className="list-unstyled links">
                         <li><Link to="./home"><strong>Home</strong></Link></li>
                         <li><Link to="./work"><strong>Work</strong></Link></li>

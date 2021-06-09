@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import './styles/Navbar.css';
-import v1 from '../video/StarNight.mp4';
-import classes from './styles/BackgroundVideo.module.css';
+import {motion} from 'framer-motion'
+
 
 
 function Header() {
@@ -14,54 +14,65 @@ function Header() {
     return (
         <>
             <nav className="navbar">
-                <div className="navbar-container">
-                    <Link to="/home" className="navbar-logo">
+                <motion.div className="navbar-container"
+                 whileHover={{
+                    scale: 1.1,
+                    textShadow: "0px 0px 8px rgb(255,255,255)"
+                }}>
+                    <Link to="/home" className="navbar-logo"
+                       
+                    >
                         TA
                         
                     </Link>
-                </div>
+                </motion.div>
                 <div className='menu-icon' onClick={handleClick}>
                     <i className={click ? 'fas fa-times slow-spin' : 'fas fa-bars'} />
                 </div>
                 <ul className={click ? 'nav-menu active' : 'nav-menu'}>
-                    <li className='nav-item'>
+                    <motion.li className='nav-item'
+                    whileHover={{
+                        scale: 1.3,
+                        color: '#f8e112'
+                    }}
+                    >
                         <Link className="nav-links" to="/home" onClick={closeMenu}>
                             HOME
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+                    <motion.li
+                    whileHover={{
+                        scale: 1.3,
+                        color: '#f8e112'
+                    }}>
                         <Link className="nav-links" to="/work" onClick={closeMenu}>
                             WORK
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+                    <motion.li
+                    whileHover={{
+                        scale: 1.3,
+                        color: '#f8e112'
+                    }}>
                         <Link className="nav-links" to="/aboutus" onClick={closeMenu}>
                             ABOUT
                         </Link>
-                    </li>
-                    <li>
+                    </motion.li>
+                    <motion.li
+                    whileHover={{
+                        scale: 1.3,
+                        color: '#f8e112'
+                    }}>
                         <Link className="nav-links" to="/contactus" onClick={closeMenu}>
                             CONTACT
                         </Link>
-                    </li>
+                    </motion.li>
                 </ul>
 
             </nav>
-            <div>
-                <div className="heading">
-                    <div className={classes.Container}>
-                        <video width="100%" height="100%" autoPlay="autoplay" loop="loop" muted className={classes.Video}>
-                            <source src={v1} type="video/mp4" />
-                        </video>
-                        <div className={classes.Content}>
-                            <div className={classes.SubContent} >
-                                <h1 className="social">TITANIUM ARTS</h1>
-                                <p>This is my React JS website to portray my work of art</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+            
+
+            
         </>
     );
 }

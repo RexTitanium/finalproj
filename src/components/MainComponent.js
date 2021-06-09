@@ -8,7 +8,7 @@ import Header from './Navbar';
 import Footer from './Footer'
 import {connect} from 'react-redux';
 import Cards from './Card';
-
+import {TransitionGroup, CSSTransition} from 'react-transition-group'
 const mapStateToProps = state =>{
   return{
     cards: state.cards,
@@ -76,6 +76,10 @@ class Main extends Component{
             <>
                 <div>
                     <Header />
+                    <TransitionGroup component="main" classNames="page-main">
+                    <CSSTransition
+                      key={this.props.location.key} classNames="fade" timeout={300}
+                    >
                     <Switch>
                         <Route path="/home" component={HomePage} />
                         <Route exact path="/aboutus" component={() => <About />} />
@@ -84,6 +88,8 @@ class Main extends Component{
                         <Route exact path="/contactus" component={() => <Contact />} />
                         <Redirect to="/home" />
                     </Switch>
+                    </CSSTransition>
+                    </TransitionGroup>
                     <Footer />
                 </div>
             </>

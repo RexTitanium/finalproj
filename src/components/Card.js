@@ -34,7 +34,7 @@ const Cards = (props) => {
 function CardItem({props}) {
     return (
       <>
-        <div className="col-12 col-md-7 card-container">
+        <div className="col-11 col-md-7 card-container">
           <div className="card-wrapper">
             {props.videof ? 
                 <video

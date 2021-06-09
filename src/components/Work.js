@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import './styles/Card.css';
 //import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import './styles/work.css'
-
+import {motion} from 'framer-motion'
 function RenderCardItem({ cards}) {  
 
   const stopMovie = (e) => {
@@ -17,7 +17,11 @@ function RenderCardItem({ cards}) {
     console.log('on');
   }
     return (
-      <li className='cards__item'>
+      <motion.li className='cards__item'
+      initial={{x:'-100vw'}}
+      animate={{x:0}}
+      transition ={{ type:'spring', stiffness: 120}}
+      >
         <Link className='cards__item__link' to={`/work/${cards.id}/${cards.title}`}>
           <figure className='cards__item__pic-wrap'>
           {cards.videof ? 
@@ -45,7 +49,7 @@ function RenderCardItem({ cards}) {
             <h5 className='cards__item__text'>Softwares Used: {cards.text}</h5>
           </div>
         </Link>
-      </li> 
+      </motion.li> 
     );
 }
   const Work = props => {
@@ -100,7 +104,11 @@ function RenderCardItem({ cards}) {
             <hr />
           </div>
         </div>
-        <div className="row justify-content-center">{menu}</div>
+        <div className="row justify-content-center"
+          
+        >
+          {menu}
+        </div>
       </div>
     );
   }
