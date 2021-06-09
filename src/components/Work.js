@@ -5,6 +5,9 @@ import './styles/Card.css';
 //import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
 import './styles/work.css'
 import {motion} from 'framer-motion'
+
+
+
 function RenderCardItem({ cards}) {  
 
   const stopMovie = (e) => {
@@ -16,6 +19,7 @@ function RenderCardItem({ cards}) {
     e.target.play();
     console.log('on');
   }
+
     return (
       <motion.li className='cards__item'
       initial={{x:'-100vw'}}
@@ -31,6 +35,7 @@ function RenderCardItem({ cards}) {
                 className='cards__item__img'
                 alt='Work Image'
                 width="100%" height="100%" muted loop="loop" 
+                loading="lazy"
                 >
                   <source src={cards.video} type="video/mp4" />
                 </video>
@@ -39,6 +44,7 @@ function RenderCardItem({ cards}) {
                 className="cards__item__img"
                 src={cards.image}
                 alt={cards.title}
+                loading="lazy"
               />}
             
           </figure>
@@ -109,6 +115,7 @@ function RenderCardItem({ cards}) {
         >
           {menu}
         </div>
+        
       </div>
     );
   }

@@ -11,9 +11,9 @@ function Footer(props) {
                     <h4>TITANIUM ARTS</h4>
                     <div className=" logos">   
                         <a className="btn btn-social-icon btn-instagram" href="https://www.instagram.com/titaniumarts/"><i className="fa fa-instagram fa-lg"></i></a>
-                        <a className="btn btn-social-icon btn-linkedin" href="http://www.linkedin.com/in/"><i className="fa fa-linkedin fa-lg"></i></a>
-                        <a className="btn btn-social-icon btn-twitter" href="http://twitter.com/"><i className="fa fa-twitter fa-lg"></i></a>
-                        <a className="btn btn-social-icon" href="mailto:s4samyak@gmail.com"><i className="fa fa-envelope-o fa-lg"></i></a>
+                        <a className="btn btn-social-icon btn-linkedin" href="https://www.linkedin.com/in/samyak-shah-5312a31b0"><i className="fa fa-linkedin fa-lg"></i></a>
+                        <a className="btn btn-social-icon btn-github" href="https://www.github.com/RexTitanium"><i className="fa fa-github fa-lg"></i></a>
+                        <a className="btn btn-social-icon btn-mail" href="mailto:s4samyak@gmail.com"><i className="fa fa-envelope-o"></i></a>
                     </div>
                 </div>           
                
@@ -33,7 +33,7 @@ function Footer(props) {
                         <li><Link to="./home"><strong>Home</strong></Link></li>
                         <li><Link to="./work"><strong>Work</strong></Link></li>
                         <li><Link to="./aboutus"><strong>About</strong></Link></li>
-                        <li><Link to="./contactus"><strong>Contact Us</strong></Link></li>
+                       {/*<li><Link to="./contactus"><strong>Contact Us</strong></Link></li>*/}
                     </ul>
                     
                 </div>  

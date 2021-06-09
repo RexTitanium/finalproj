@@ -58,7 +58,7 @@ function Header() {
                             ABOUT
                         </Link>
                     </motion.li>
-                    <motion.li
+                    {/*<motion.li
                     whileHover={{
                         scale: 1.3,
                         color: '#f8e112'
@@ -66,7 +66,7 @@ function Header() {
                         <Link className="nav-links" to="/contactus" onClick={closeMenu}>
                             CONTACT
                         </Link>
-                    </motion.li>
+                    </motion.li>*/}
                 </ul>
 
             </nav>

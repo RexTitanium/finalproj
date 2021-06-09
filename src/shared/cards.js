@@ -1,5 +1,6 @@
 export const CARDS = 
 [
+      
       {
         id:0,
         image: "/assets/images/Tranquille2.png",
@@ -81,5 +82,15 @@ export const CARDS =
         text: "Blender, Vegas PRO",
         videof: true,
         featured: false
-      }
+      },
+      {
+        id:11,
+        image:"/assets/images/SkatingRink4.png",
+        title: "FLYING RINK",
+        text: "Blender, Photoshop",
+        newcont: true,
+        featured: true
+      },
+
+      
     ]

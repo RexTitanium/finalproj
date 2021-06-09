@@ -2,7 +2,6 @@ import React from 'react';
 import './styles/IndCard.css';
 import { Loading } from './Loading';
 
-
 const Cards = (props) => {
   if (props.isLoading) {
       return(
@@ -34,7 +33,7 @@ const Cards = (props) => {
 function CardItem({props}) {
     return (
       <>
-        <div className="col-11 col-md-7 card-container">
+        <div className="col-12 col-md-8 card-container">
           <div className="card-wrapper">
             {props.videof ? 
                 <video
@@ -56,6 +55,13 @@ function CardItem({props}) {
             <h2>{props.title}</h2><br />
             <h1 className="description">SOFTWARES USED: </h1>
             <h5 className="description-text">{props.text} </h5><br />
+            <div id="wrap">
+              <a href={props.image} download={props.title} target='_blank' class="btn-slide2">
+                  <span class="circle2"><i class="fa fa-download"></i></span>
+                  <span class="title2">Download</span>
+                  <span class="title-hover2">Click here</span>
+                </a>
+</div>
           </div>
           
         </div>

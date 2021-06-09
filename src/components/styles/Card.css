@@ -5,6 +5,7 @@
 .cards__container {
   display: flex;
   flex-flow: column;
+  
   align-items: left;
   max-width: 1120px;
   width: 90%;
@@ -39,7 +40,6 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
   padding: 0;
-  display: flex;
 }
 
 .cards__item__pic-wrap {

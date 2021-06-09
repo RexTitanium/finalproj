@@ -12,6 +12,7 @@
     margin: 20px;
     display: inline-block;
     align-items: center;
+    width: 150px;
   }
   
   .photo {
@@ -52,3 +53,13 @@
   }
   
  
+@media screen and (max-width: 768px) {
+  .aboutme{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .photo{
+    width: 90%;
+  }
+}

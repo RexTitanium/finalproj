@@ -29,8 +29,16 @@
   font-family: "Jost";
 }
 
+
 .logos a i {
-  color: rgb(255, 244, 223);
+  color: rgb(77, 77, 77);
+  padding: 8.7px;
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background: white;
+  text-align: center;
+
 }
 
 .ml {
@@ -96,7 +104,40 @@ body {
   .link-nav li {
     font-size: 70%;
   }
+
+  .logos a i{
+    width: 20px;
+    height: 20px;
+    font-size: 10px;
+    padding: 6px;
+    text-align: center;
+  }
   .link-nav {
     margin-left: 20px;
   }
+}
+
+
+.btn-instagram i:hover{
+  background-color: rgb(255, 79, 138);
+  color: white;
+  transition: all 0.7s ease;
+}
+
+.btn-linkedin i:hover{
+  background-color: rgb(45, 146, 219);
+  color: white;
+  transition: all 0.7s ease;
+}
+
+.btn-github i:hover{
+  background-color: rgb(58, 58, 58);
+  color: rgb(255, 255, 255);
+  transition: all 0.7s ease;
+}
+
+.btn-mail i:hover{
+  background-color: rgb(119, 40, 40);
+  color: white;
+  transition: all 0.7s ease;
 }

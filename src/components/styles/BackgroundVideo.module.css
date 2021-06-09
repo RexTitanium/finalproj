@@ -58,10 +58,6 @@
   .SubContent h1 {
     font-size: 3vh;
   }
-  .SubContent h1:hover {
-    font-size: 21px;
-    transition: all 0.2s ease;
-  }
 
   .SubContent p {
     font-size: 0.7rem;

@@ -98,10 +98,16 @@ const Home = props =>{
                             <source src={v1} type="video/mp4" />
                         </video>
                         <div className={classes.Content}>
-                            <div className={classes.SubContent} >
-                                <h1 className="social">TITANIUM ARTS</h1>
+                            <motion.div
+                            initial={{x:'-100vw'}}
+                            animate={{x:0}}
+                            transition ={{ type:'spring', stiffness: 120}} className={classes.SubContent} >
+                                <motion.h1
+                                whileHover={{
+                                    scale: 1.2
+                                }} className="social">TITANIUM ARTS</motion.h1>
                                 <p>This is my React JS website to portray my work of art</p>
-                            </div>
+                            </motion.div>
                         </div>
                     </div>
                 </div>
@@ -156,6 +162,7 @@ const Home = props =>{
                             </li>
                         </ul>
                     </div>
+                    
                 </div>
             </div>
             </div>
