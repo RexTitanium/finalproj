@@ -70,23 +70,23 @@ class Contact extends Component{
                  
                  <div className=" col-15 col-md-5">
                     <div className="contact-form">
-                        <form className="contact-form" onSubmit="Submit" name="contact" method="post" data-netlify="true"  data-netlify-honeypot="bot-field" >
+                        <form className="contact-form" onSubmit={this.handleSubmit} name="contact" method="post" data-netlify="true"  data-netlify-honeypot="bot-field" >
                          <input type="hidden" name="form-name" value="contact" />
                             <p className="group">      
-                                <input type="text" name="name" required />
+                                <input type="text" name="name" value={name} onChange={this.handleChange} required />
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label>Name</label>
                             </p>
                         
                             <p className="group">      
-                                <input type="email" id="email" name="email"  required />
+                                <input type="email" id="email" name="email" value={email} onChange={this.handleChange} required />
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label for="email">Email</label>
                             </p>
                             <p className="group">      
-                                <input type="text" name="message" required className="textbox" />
+                                <input type="text" name="message" required className="textbox" value={message} onChange={this.handleChange}/>
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label>Message</label>
