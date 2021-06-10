@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
-import './styles/about.css';
+import './styles/about.scss';
 import {motion} from 'framer-motion'
+import {Link} from 'react-router-dom'
 AOS.init({
     duration: 500,
     delay:300
@@ -13,6 +14,9 @@ class About extends Component{
     render() {
         return (
              <div>
+                 <div  className="about-us-header">
+                    <Link to="/aboutus"><img src="/assets/images/about-us-banner.jpg"/></Link>
+                </div>
                  <div className="col-12 col-md-5 aboutme ">
                     <div className="col-12 col-md-10 image-card">
                         <motion.img 

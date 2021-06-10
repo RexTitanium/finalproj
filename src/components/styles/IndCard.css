@@ -10,12 +10,12 @@
   border-radius: 10px;
   position: relative;
   margin: auto;
-  overflow: hidden;
-  width: 540px;
+  overflow: visible;
+  width: 100%;
   box-shadow: 0 5px 10px black;
 }
 .card-image {
-  max-width: 100%;
+  width: 100%;
   transition: all 0.3s;
   display: block;
   transform: scale(1);
@@ -26,6 +26,7 @@
   font-family: Arial;
   color: rgb(151, 151, 151);
   margin-left: 50px;
+  width: 100%;
 }
 
 .title {
@@ -40,12 +41,17 @@
     margin: 0px;
     margin-top: 10px;
     flex-direction: column;
+
   }
   .card-wrapper {
-    width: 240px;
+
+    width: 90%;
   }
   .card-info{
     margin: 50px;
+  }
+  .card-image{
+    width: 100%;
   }
 }
 
@@ -83,6 +89,7 @@ h2 {
 }
 
 #wrap {
+
   text-align: center;
 }
 
@@ -94,7 +101,7 @@ h2 {
   line-height: 50px;
   padding: 0;
   border-radius: 50px;
-  background: #353535;
+  background: #252323;
   border: 2px solid #0099cc;
   
   transition: .5s;

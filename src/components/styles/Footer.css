@@ -6,7 +6,6 @@
   margin: 0px auto;
   padding: 20px 0px 20px 0px;
 }
-
 .links li a {
   font-family: "Roboto Condensed";
   font-size: 15px;
@@ -121,23 +120,23 @@ body {
 .btn-instagram i:hover{
   background-color: rgb(255, 79, 138);
   color: white;
-  transition: all 0.7s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-linkedin i:hover{
   background-color: rgb(45, 146, 219);
   color: white;
-  transition: all 0.7s ease;
+  transition: all 0.2s ease;
 }
 
 .btn-github i:hover{
   background-color: rgb(58, 58, 58);
   color: rgb(255, 255, 255);
-  transition: all 0.7s ease;
+  transition: all 0.2s ease;
 }
 
-.btn-mail i:hover{
-  background-color: rgb(119, 40, 40);
+.btn-twitter i:hover{
+  background-color: rgb(0, 174, 255);
   color: white;
-  transition: all 0.7s ease;
+  transition: all 0.2s ease;
 }

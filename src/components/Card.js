@@ -33,7 +33,7 @@ const Cards = (props) => {
 function CardItem({props}) {
     return (
       <>
-        <div className="col-12 col-md-8 card-container">
+        <div className="col-12 col-md-8 col-sm-12 card-container">
           <div className="card-wrapper">
             {props.videof ? 
                 <video
@@ -56,7 +56,7 @@ function CardItem({props}) {
             <h1 className="description">SOFTWARES USED: </h1>
             <h5 className="description-text">{props.text} </h5><br />
             <div id="wrap">
-              <a href={props.image} download={props.title} target='_blank' class="btn-slide2">
+              <a href={props.link} download={props.title} target='_blank' class="btn-slide2">
                   <span class="circle2"><i class="fa fa-download"></i></span>
                   <span class="title2">Download</span>
                   <span class="title-hover2">Click here</span>
