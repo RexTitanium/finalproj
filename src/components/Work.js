@@ -3,7 +3,7 @@ import {Loading} from './Loading'
 import { Link } from 'react-router-dom';
 import './styles/Card.css';
 //import { Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import './styles/work.css'
+import './styles/work.scss'
 import {motion} from 'framer-motion'
 
 
@@ -97,6 +97,10 @@ function RenderCardItem({ cards}) {
   else{
 
     return (
+      <div>
+        <div  className="work-header">
+                    <Link to="/work"><img src="/assets/images/work-banner.jpg"/></Link>
+                </div>
       <div className="container">
         <div className="row justify-content-center">
           {/*<Breadcrumb>
@@ -105,10 +109,6 @@ function RenderCardItem({ cards}) {
             </BreadcrumbItem>
             <BreadcrumbItem active>Work</BreadcrumbItem>
           </Breadcrumb>*/}
-          <div className="col-12 col-md-5 work_header">
-            <h3>WORK</h3>
-            <hr />
-          </div>
         </div>
         <div className="row justify-content-center"
           
@@ -116,6 +116,7 @@ function RenderCardItem({ cards}) {
           {menu}
         </div>
         
+      </div>
       </div>
     );
   }

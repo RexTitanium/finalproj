@@ -18,7 +18,7 @@ class About extends Component{
                     <Link to="/aboutus"><img src="/assets/images/about-us-banner.jpg"/></Link>
                 </div>
                  <div className="col-12 col-md-5 aboutme ">
-                    <div className="col-12 col-md-10 image-card">
+                    <div className="col-12 image-card">
                         <motion.img 
                             initial ={{opacity: 0}}
                             animate = {{opacity: 1}}

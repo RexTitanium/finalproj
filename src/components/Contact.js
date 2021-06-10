@@ -3,8 +3,44 @@ import {motion} from 'framer-motion';
 import {Link} from 'react-router-dom';
 import {Avatar, Tooltip, Zoom} from '@material-ui/core';
 import "./styles/contact.scss"
+
+
+const encode = (data) => {
+    return Object.keys(data)
+        .map(key => encodeURIComponent(key) + "=" + encodeURIComponent(data[key]))
+        .join("&");
+  }
+
 class Contact extends Component{
+    constructor(props) {
+        super(props);
+        this.state = { name: "", email: "", message: "" };
+        this.resetForm = this.resetForm.bind(this);
+    }
+    handleSubmit = e => {
+        fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: encode({ 
+              "form-name": "contact", ...this.state })
+        })
+          .then(() => alert("Success!"))
+          .catch(error => alert(error));
+  
+        e.preventDefault();
+      };
+  
+      handleChange = e => this.setState({ [e.target.name]: e.target.value });
+
+      resetForm(){
+          this.setState({
+              name: "",
+              email: "",
+              message: ""
+          })
+      }
     render() {
+        const { name, email, message } = this.state;
         return (
             <div>
                 <div  className="contact-us-header">
@@ -34,29 +70,30 @@ class Contact extends Component{
                  
                  <div className=" col-15 col-md-5">
                     <div className="contact-form">
-                        <form className="contact-form" method="post" data-netlify="true">
-                            <div className="group">      
-                                <input type="text" required />
+                        <form className="contact-form" onSubmit="Submit" name="contact" method="post" data-netlify="true"  data-netlify-honeypot="bot-field" >
+                         <input type="hidden" name="form-name" value="contact" />
+                            <p className="group">      
+                                <input type="text" name="name" required />
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label>Name</label>
-                            </div>
+                            </p>
                         
-                            <div className="group">      
-                                <input type="email" id="email" name="email" required placeholder=""/>
-                                
+                            <p className="group">      
+                                <input type="email" id="email" name="email"  required />
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
                                 <label for="email">Email</label>
-                            </div>
-                            <div className="group">      
-                                <input type="text" required className="textbox"/>
+                            </p>
+                            <p className="group">      
+                                <input type="text" name="message" required className="textbox" />
                                 <span className="highlight"></span>
                                 <span className="bar"></span>
-                                <label>Subject</label>
-                            </div>
-                            <div className="col-md-3 col-sm-3 col-xs-6">
+                                <label>Message</label>
+                            </p>
+                            <div className="col-md-3 col-sm-3 col-xs-6 buttons">
                                 <button type="submit" className="btn btn-sm animated-button send">Submit</button>
+                                <button type="button" className="btn btn-sm animated-button clear" onClick={this.resetForm}>Clear</button>
                             </div>
                     </form>
                 </div>
@@ -66,5 +103,6 @@ class Contact extends Component{
         );
     }
 }
+
 
 export default Contact;

@@ -1,0 +1,33 @@
+@import url("https://fonts.googleapis.com/css?family=Jost");
+.work_header {
+  font-family: "Jost";
+  width: 100%;
+  text-align: center;
+}
+
+.work-header {
+  height: 100%;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  opacity: 1;  
+  margin-bottom: 50px;
+  img{
+    width: 100%;
+    &:hover{
+      opacity: 0.8;
+      transition: all 0.4s ease;
+    }
+  }
+}
+
+@media screen and (max-width: 768px) {
+ 
+  .work-header{
+    height: 200px;
+    img{
+      width: 100%;
+    }
+  }
+}
